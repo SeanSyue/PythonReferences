@@ -1,0 +1,16 @@
+# https://zhuanlan.zhihu.com/p/33593039
+
+
+# ============================================================
+# 1. list comprehension(列表解析）
+# ============================================================
+# -- Syntax of list comprehension:
+# result = [do_something_with(item) for item in item_list]
+# -- Same way to get a generator:
+# result = (do_something_with(item) for item in item_list)
+
+# ============================================================
+# 2. map function
+# ============================================================
+# -- Syntax of map functions:
+# doubled_list = map(lambda x: x * 2, old_list)

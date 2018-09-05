@@ -1,0 +1,10 @@
+ERROR:ex:Error!
+Traceback (most recent call last):
+  File "/Users/seansyue/PycharmProjects/RegularProject/references/logFile/log_exception.py", line 7, in <module>
+    raise RuntimeError
+RuntimeError
+ERROR:ex:Error!
+Traceback (most recent call last):
+  File "/Users/seansyue/PycharmProjects/RegularProject/references/logFile/log_exception.py", line 7, in <module>
+    raise RuntimeError
+RuntimeError

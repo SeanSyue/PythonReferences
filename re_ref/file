@@ -1,0 +1,117 @@
+https://www.youtube.com/watch?v=K8L6KVGG-7o&t=1s
+/*
+MetaCharacters (Need to be escaped):
+.[{()\^$|?*+
+*/
+
+
+#######################
+#### Sample Regexs ####
+#######################
+.       - Any Character Except New Line
+\d      - Digit (0-9)
+\D      - Not a Digit (0-9)
+\w      - Word Character (a-z, A-Z, 0-9, _)
+\W      - Not a Word Character
+\s      - Whitespace (space, tab, newline)
+\S      - Not Whitespace (space, tab, newline)
+
+\b      - Word Boundary
+\B      - Not a Word Boundary
+^       - Beginning of a String
+$       - End of a String
+
+[]      - Matches Characters in brackets
+[^ ]    - Matches Characters NOT in brackets
+|       - Either Or
+( )     - Group
+
+Quantifiers:
+*       - 0 or More
++       - 1 or More
+?       - 0 or One
+{3}     - Exact Number
+{3,4}   - Range of Numbers (Minimum, Maximum)
+
+
+#### Sample Regexs ####
+
+[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+
+
+#######################
+#### Sample Regexs ####
+#######################
+
+
+/*
+\w
+To find non-word character, which are those excluded in the list below, use:
+\W
+or
+[^a-zA-Z]
+*/
+abcdefghijklmnopqrstuvwxyz
+ABCDEFGHIJKLMNOPQRSTUVWXYZ
+1234567890
+
+/*
+    ^Ha
+    Ha$
+    Ha\s
+*/
+Ha HaHa
+
+
+/*
+Exclude "bat"
+    [^b]at
+*/
+cat
+mat
+pat
+bat
+
+
+/*
+Select telephone numbers containing "-" or "."
+    \d\d\d[-.]\d\d\d[-.]\d\d\d\
+or
+    \d{3}[-.]\d{3}[-.]\d{4}
+*/
+321-555-4321
+123.555.1234
+123*555*1234
+
+/*
+To select all of below
+    M(r|s|rs)\.?\s\w+
+*/
+Mr. Schafer
+Mr Smith
+Ms Davis
+Mrs. Robinson
+Mr. T
+
+
+/*
+To select all of below
+    [a-zA-Z0-9.-]+@[a-z-]+\.(com|edu|net)
+*/
+CoreyMSchafer@gmail.com
+corey.schafer@university.edu
+corey-321-schafer@my-work.net
+
+/*
+To select all of below
+    https?://(www.)?(\w+)(\.\w+)
+Get optional www.
+    Group 1: $1
+Get domain name
+    Group 2: $2
+Get top level domain
+    Group 3: $3
+*/
+https://www.google.com
+http://coreyms.com
+https://youtube.com
+https://www.nasa.gov
